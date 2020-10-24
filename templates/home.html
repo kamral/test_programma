@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+{%block content%}
+<a href="/"> <h1>Списо изображений</h1> </a>
+    <a href="{% url 'post_new'%}"> <h2> Добавить изображения </h2> </a>
+
+{% for post in posts %}
+
+   <a href="{{post.cover.url}}">
+          <h2>{{ post.title }}</h2>
+<!--       <img src="{{ post.cover.url}}"> </a>-->
+<!--       <h2>{{post.cover.url}} </h2>-->
+       {%empty%}
+       <i> Нет изображения </i>
+  {% endfor %}
+{%endblock content%}
+
+</body>
+</html>

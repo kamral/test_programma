@@ -1,0 +1,9 @@
+{%extends 'home.html'%}
+{%block content%}
+<p> Back to <a href="{% url 'home' %}"> All Posts </a></p>
+<div class="post-entry">
+    <h2> {{object.title}} </h2>
+    <h2> <img src="{{object.image}}"></h2>
+    <h2> <img src="{{object.cover.url}}"></h2>
+</div>
+{%endblock content%}

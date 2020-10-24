@@ -8,6 +8,7 @@ from .models import Post
 def index(request):
     posts=Post.objects.all()
     return render(request, 'home.html', {'posts':posts})
+
 class PageCreateView(CreateView):
     model = Post
     template_name = 'post_new.html'

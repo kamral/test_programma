@@ -6,7 +6,7 @@ from django.urls import reverse
 
 class Post(models.Model):
     image=models.CharField(max_length=1024,blank=True)
-    title=models.TextField()
+    title=models.CharField(max_length=1024,)
     cover = models.ImageField(upload_to='images/',blank=True)
 
     def __str__(self):
